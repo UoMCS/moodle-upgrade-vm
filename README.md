@@ -10,8 +10,8 @@ Unlikely to be of much use unless you meet all the following criteria:
  * Use Apache as your web server.
  * Use MySQL as your database server.
  
- Requirements
- ------------
+Requirements
+------------
  
-  * Vagrant 1.4.x or later.
-  * VirtualBox 4.3.x or later.
+ * Vagrant 1.4.x or later.
+ * VirtualBox 4.3.x or later.
