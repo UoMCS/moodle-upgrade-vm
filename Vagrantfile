@@ -2,7 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "gentoo-x86-no-vtx"
+  config.vm.box = "gentoo-moodle"
+  config.vm.boot_timeout = 180
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
