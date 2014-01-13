@@ -9,3 +9,9 @@ Unlikely to be of much use unless you meet all the following criteria:
  * Use Gentoo as your Linux distribution.
  * Use Apache as your web server.
  * Use MySQL as your database server.
+ 
+ Requirements
+ ------------
+ 
+  * Vagrant 1.4.x or later.
+  * VirtualBox 4.3.x or later.
