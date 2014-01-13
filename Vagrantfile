@@ -28,4 +28,6 @@ Vagrant.configure("2") do |config|
 	 # Disable hardware virtualization - can comment this out if your CPU supports VT-X/AMD-V
      vb.customize ["modifyvm", :id, "--hwvirtex", "off"]
   end
+  
+  config.vm.provision "puppet"
 end
