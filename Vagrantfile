@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "gentoo-moodle-puppet-v3"
+  config.vm.box = "gentoo-moodle-puppet-v5"
   config.vm.boot_timeout = 180
 
   # Create a forwarded port mapping which allows access to a specific port
