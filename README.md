@@ -32,6 +32,12 @@ dev-lang/php
 app-admin/puppet
 ```
 
+The initial MySQL database needs to be set up:
+
+```
+/usr/bin/mysql_install_db
+```
+
 Apache, MySQL and Puppet also need to be started on boot:
 
 ```
