@@ -32,4 +32,18 @@ dev-lang/php
 app-admin/puppet
 ```
 
+Apache, MySQL and Puppet also need to be started on boot:
+
+```
+rc-update add apache2 default
+rc-update add mysql default
+rc-udpate add puppet default
+```
+
+The Puppet module for Gentoo needs to be installed:
+
+```
+puppet module install gentoo/portage
+```
+
 The global `USE` variable is set to: `bindist -X apache2 mysql php`
