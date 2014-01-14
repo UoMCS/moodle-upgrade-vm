@@ -1,4 +1,4 @@
-package_use { "net-dns/bind-tools":
-  ensure => present,
-}
+#portage::package { "net-dns/bind-tools":
+#  ensure => present,
+#}
 
