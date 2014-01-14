@@ -32,6 +32,8 @@ dev-lang/php
 app-admin/puppet
 ```
 
+PHP needs to be loaded as an Apache module. Add `-D PHP5` to `APACHE2_OPTS` in `/etc/conf.d/apache3`.
+
 The initial MySQL database needs to be set up:
 
 ```
