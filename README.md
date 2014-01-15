@@ -40,11 +40,10 @@ The initial MySQL database needs to be set up:
 /usr/bin/mysql_install_db
 ```
 
-Apache, MySQL and Puppet also need to be started on boot (although this could also go in Puppet manifest):
+Apache and Puppet also need to be started on boot (MySQL is started in Puppet manifest):
 
 ```
 rc-update add apache2 default
-rc-update add mysql default
 rc-udpate add puppet default
 ```
 
