@@ -21,6 +21,13 @@ exec { 'unpack_moodle_db':
   command => '/bin/gunzip /home/vagrant/moodle.sql.gz',
 }
 
+file { '/home/vagrant/moodle-2.2.11.tgz':
+  ensure => present,
+  mode => 644,
+  source => '/vagrant_data/moodle-2.2.11.tgz',
+  #before => Exec['unpack_moodle_code'],
+}
+
 file { '/etc/apache2/vhosts.d/moodle2.conf':
   ensure => present,
   source => '/vagrant_vhosts/moodle2.conf',
