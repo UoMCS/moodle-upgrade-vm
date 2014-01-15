@@ -9,6 +9,18 @@ file { '/home/vagrant/www/moodle2/index.html':
   content => 'Moodle',
 }
 
+file { '/home/vagrant/moodle.sql.gz':
+  ensure => present,
+  mode => 0600,
+  source => '/vagrant_data/moodle.sql.gz',
+  before => Exec['unpack_moodle_db'],
+}
+
+exec { 'unpack_moodle_db':
+  unless => '/usr/bin/test -f /home/vagrant/moodle.sql',
+  command => '/bin/gunzip /home/vagrant/moodle.sql.gz',
+}
+
 file { '/etc/apache2/vhosts.d/moodle2.conf':
   ensure => present,
   source => '/vagrant_vhosts/moodle2.conf',
@@ -18,4 +30,26 @@ file { '/etc/apache2/vhosts.d/moodle2.conf':
 service { 'apache2':
   ensure => running,
   enable => true,
+}
+
+service { 'mysql':
+  ensure => running,
+  enable => true,
+}
+
+mysql_user { 'moodle2@localhost':
+  ensure => present,
+}
+
+mysql_database { 'moodle2':
+  ensure => present,
+  charset => 'utf8',
+}
+
+mysql_grant { 'moodle2@localhost/moodle2.*':
+  ensure => present,
+  options => ['GRANT'],
+  privileges => ['ALL'],
+  table => 'moodle2.*',
+  user => 'moodle2@localhost',
 }
