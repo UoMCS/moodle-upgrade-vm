@@ -35,4 +35,5 @@ Vagrant.configure("2") do |config|
   end
   
   config.vm.provision "puppet"
+  config.vm.provision "shell", path: "scripts/moodle-import.sh"
 end

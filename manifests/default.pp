@@ -37,19 +37,19 @@ service { 'mysql':
   enable => true,
 }
 
-mysql_user { 'moodle2@localhost':
+mysql_user { 'moodle@localhost':
   ensure => present,
 }
 
-mysql_database { 'moodle2':
+mysql_database { 'moodle':
   ensure => present,
   charset => 'utf8',
 }
 
-mysql_grant { 'moodle2@localhost/moodle2.*':
+mysql_grant { 'moodle@localhost/moodle.*':
   ensure => present,
   options => ['GRANT'],
   privileges => ['ALL'],
-  table => 'moodle2.*',
-  user => 'moodle2@localhost',
+  table => 'moodle.*',
+  user => 'moodle@localhost',
 }
