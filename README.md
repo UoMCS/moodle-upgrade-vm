@@ -48,10 +48,11 @@ rc-update add mysql default
 rc-udpate add puppet default
 ```
 
-The Puppet module for Gentoo needs to be installed:
+Puppet modules need to be installed (`puppet module install`):
 
 ```
-puppet module install gentoo/portage
+gentoo/portage
+puppetlabs/mysql
 ```
 
 The global `USE` variable is set to: `bindist -X apache2 mysql php`
