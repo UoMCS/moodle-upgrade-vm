@@ -3,6 +3,9 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "gentoo-moodle-puppet-v5"
+  
+  # This box can take several minutes to boot on old machines, so increase the boot timeout
+  # (default is far too low)
   config.vm.boot_timeout = 180
 
   # Create a forwarded port mapping which allows access to a specific port
@@ -27,6 +30,7 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--cpus", 1]
      
     # Disable hardware virtualization - can comment this out if your CPU supports VT-X/AMD-V
+	# (you will probably see a significant performance boost)
     vb.customize ["modifyvm", :id, "--hwvirtex", "off"]
   end
   
