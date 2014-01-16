@@ -1,17 +1,23 @@
 file { ['/home/vagrant/www', '/home/vagrant/www/moodle2']:
   ensure => directory,
   mode => 0644,
+  owner => vagrant,
+  group => vagrant,
 }
 
 file { '/home/vagrant/www/moodle2/index.html':
   ensure => present,
   mode => 0644,
+  owner => vagrant,
+  group => vagrant,
   content => 'Moodle',
 }
 
 file { '/home/vagrant/moodle.sql.gz':
   ensure => present,
   mode => 0600,
+  owner => vagrant,
+  group => vagrant,
   source => '/vagrant_data/moodle.sql.gz',
   before => Exec['unpack_moodle_db'],
 }
@@ -24,9 +30,16 @@ exec { 'unpack_moodle_db':
 file { '/home/vagrant/moodle-2.2.11.tgz':
   ensure => present,
   mode => 644,
+  owner => vagrant,
+  group => vagrant,
   source => '/vagrant_data/moodle-2.2.11.tgz',
   #before => Exec['unpack_moodle_code'],
 }
+
+#exec { 'unpack_moodle_code':
+#  cwd => '/home/vagrant/www/moodle2/',
+#  command => '/bin/tar --strip-components=1 -xzf /home/vagrant/moodle-2.2.11.tgz',
+#}
 
 file { '/etc/apache2/vhosts.d/moodle2.conf':
   ensure => present,
