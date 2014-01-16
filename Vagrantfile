@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "gentoo-moodle-puppet-v6"
+  config.vm.box = "gentoo-moodle-puppet-v7"
   
   # This box can take several minutes to boot on old machines, so increase the boot timeout
   # (default is far too low)
