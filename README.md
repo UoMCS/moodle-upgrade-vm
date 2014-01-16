@@ -36,7 +36,7 @@ app-admin/puppet
 PHP needs to be built with support for the `mysqli` extension, so add the following line to `/etc/portage/package.use`:
 
 ```
-dev-lang/php mysqli
+dev-lang/php mysqli curl zip xmlrpc soap gd intl
 ```
 
 PHP needs to be loaded as an Apache module. Add `-D PHP5` to `APACHE2_OPTS` in `/etc/conf.d/apache3`.
