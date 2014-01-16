@@ -26,6 +26,7 @@ The box used is a standard x86 Gentoo install, with the following changes:
 In addition, the following packages have been installed:
 
 ```
+app-emulation/virtualbox-guest-additions
 www-servers/apache
 dev-db/mysql
 dev-lang/php
