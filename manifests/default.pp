@@ -1,3 +1,6 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 file { ['/home/vagrant/www', '/home/vagrant/www/moodle2', '/home/vagrant/www/moodle2/htdocs']:
   ensure => directory,
   mode => 0644,
