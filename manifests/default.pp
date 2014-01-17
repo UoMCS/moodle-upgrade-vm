@@ -8,7 +8,7 @@ file { ['/home/vagrant/www', '/home/vagrant/www/moodle2', '/home/vagrant/www/moo
   group => vagrant,
 }
 
-file { '/home/vagrant/www/moodle2/moodle-data':
+file { '/home/vagrant/www/moodle2/moodledata':
   ensure => directory,
   mode => 0777,
   owner => vagrant,
