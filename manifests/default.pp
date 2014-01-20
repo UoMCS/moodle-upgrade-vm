@@ -15,6 +15,14 @@ file { '/home/vagrant/www/moodle2/moodledata':
   group => vagrant,
 }
 
+file { '/home/vagrant/www/moodle2/htdocs/config.php':
+  ensure => present,
+  mode => 0644,
+  owner => vagrant,
+  group => vagrant,
+  source => '/vagrant_data/config-new.php',
+}
+
 file { '/home/vagrant/moodle.sql.gz':
   ensure => present,
   mode => 0600,
