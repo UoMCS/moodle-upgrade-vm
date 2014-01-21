@@ -37,4 +37,11 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision "puppet"
   config.vm.provision "shell", path: "scripts/moodle-import.sh"
+  config.vm.provision "shell", path: "scripts/upgrade-1_9-2_2.sh"
+  
+  config.vm.provision "puppet" do |puppet|
+    puppet.manifest_file = "2_2-2_6.pp"
+  end
+  
+  config.vm.provision "shell", path: "scripts/upgrade-2_2-2_6.sh"
 end
