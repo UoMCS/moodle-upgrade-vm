@@ -35,6 +35,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--hwvirtex", "off"]
   end
   
+  config.vm.provision "shell", path: "scripts/free-space.sh"
+  
   config.vm.provision "puppet"
   config.vm.provision "shell", path: "scripts/moodle-import.sh"
   config.vm.provision "shell", path: "scripts/upgrade-1_9-2_2.sh"
