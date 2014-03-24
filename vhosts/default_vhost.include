@@ -31,5 +31,3 @@ DocumentRoot "/home/vagrant/www/moodle2/htdocs"
   Order allow,deny
   Allow from all
 </Directory>
-
-
