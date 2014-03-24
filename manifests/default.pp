@@ -57,6 +57,12 @@ file { '/etc/apache2/vhosts.d/moodle2.conf':
   notify => Service['apache2'],
 }
 
+file { '/etc/apache2/vhosts.d/moodle2-ssl.conf':
+  ensure => present,
+  source => '/vagrant_vhosts/moodle2-ssl.conf',
+  notify => Service['apache2'],
+}
+
 service { 'apache2':
   ensure => running,
   enable => true,
