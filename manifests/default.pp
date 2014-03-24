@@ -51,15 +51,12 @@ exec { 'unpack_moodle_code':
   command => '/bin/tar --strip-components=1 -xzf /home/vagrant/moodle-2.2.11.tgz',
 }
 
-file { '/etc/apache2/vhosts.d/moodle2.conf':
+file { '/etc/apache2/vhosts.d/default_vhost.include':
   ensure => present,
-  source => '/vagrant_vhosts/moodle2.conf',
-  notify => Service['apache2'],
-}
-
-file { '/etc/apache2/vhosts.d/moodle2-ssl.conf':
-  ensure => present,
-  source => '/vagrant_vhosts/moodle2-ssl.conf',
+  source => '/vagrant_vhosts/default_vhost.include',
+  mode => 644,
+  owner => root,
+  group => root,
   notify => Service['apache2'],
 }
 
