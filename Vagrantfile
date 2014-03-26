@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
     # Don't boot with headless mode
     #vb.gui = true
 
-    vb.customize ["modifyvm", :id, "--memory", 1024]
+    vb.customize ["modifyvm", :id, "--memory", 2048]
     vb.customize ["modifyvm", :id, "--cpus", 1]
      
     # Disable hardware virtualization - can comment this out if your CPU supports VT-X/AMD-V
