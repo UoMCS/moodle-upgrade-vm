@@ -13,8 +13,13 @@ Unlikely to be of much use unless you meet all the following criteria:
 Requirements
 ------------
  
- * Vagrant 1.4.x or later.
+ * Vagrant 1.3.5 or later.
  * VirtualBox 4.3.x or later.
+
+The VM has been tested with the following combination (both using Windows 7 as the host operating system):
+
+ * Vagrant 1.3.5 and VirtualBox 4.3.6
+ * Vagrant 1.5.1 and VirtualBox 4.3.10
 
 Vagrant box
 -----------
