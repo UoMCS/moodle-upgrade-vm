@@ -1,7 +1,7 @@
 Moodle Upgrade VM
 =================
 
-Vagrant configuration for testing Moodle upgrade from 1.9.19 to 2.5.4.
+Vagrant configuration for testing Moodle upgrade from 1.9.19 to 2.6.
 
 Unlikely to be of much use unless you meet all the following criteria:
 
