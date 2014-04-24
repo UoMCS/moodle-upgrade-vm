@@ -19,7 +19,7 @@ Requirements
 The VM has been tested with the following combination (both using Windows 7 as the host operating system):
 
  * Vagrant 1.3.5 and VirtualBox 4.3.6
- * Vagrant 1.5.1 and VirtualBox 4.3.10
+ * Vagrant 1.5.x and VirtualBox 4.3.10
 
 Vagrant box
 -----------
